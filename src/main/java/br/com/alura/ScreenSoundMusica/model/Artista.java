@@ -16,7 +16,7 @@ public class Artista {
     private String nome;
     @Enumerated(EnumType.STRING)
     private TipoArtista tipo;
-
+    @OneToMany(mappedBy = "artista")
     private List<Musica> musicas = new ArrayList<>();
 
     // Getters e Setters
