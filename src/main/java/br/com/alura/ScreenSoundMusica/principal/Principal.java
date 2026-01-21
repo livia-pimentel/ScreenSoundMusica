@@ -3,7 +3,7 @@ package br.com.alura.ScreenSoundMusica.principal;
 import java.util.Scanner;
 
 public class Principal {
-    Scanner leitura = new Scanner(System.in);
+    private Scanner leitura = new Scanner(System.in);
 
     public void exibeMenu() {
         var opcao = -1;
