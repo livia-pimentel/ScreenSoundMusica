@@ -5,6 +5,7 @@ import br.com.alura.ScreenSoundMusica.model.TipoArtista;
 import br.com.alura.ScreenSoundMusica.repository.ArtistaRepository;
 import br.com.alura.ScreenSoundMusica.model.Musica;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -90,6 +91,7 @@ public class Principal {
             var nomeMusica = leitura.nextLine();
             Musica musica = new Musica(nomeMusica);
             musica.setArtista(artista.get());
+            artista.get().getMusicas().add(musica);
             repositorio.save(artista.get());
         } else {
             System.out.println("Artista não encontrado!");
@@ -98,6 +100,8 @@ public class Principal {
     }
 
     private void listarMusicas() {
+        List<Artista> artistas = repositorio.findAll();
+        artistas.forEach(System.out::println);
 
     }
 
