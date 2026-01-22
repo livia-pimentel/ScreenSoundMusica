@@ -1,5 +1,8 @@
 package br.com.alura.ScreenSoundMusica.principal;
 
+import br.com.alura.ScreenSoundMusica.model.Artista;
+import br.com.alura.ScreenSoundMusica.model.TipoArtista;
+
 import java.util.Scanner;
 
 public class Principal {
@@ -51,7 +54,14 @@ public class Principal {
     }
 
     private void cadastrarArtistas() {
-
+        System.out.println("Informe o nome do artista: ");
+        var nome = leitura.nextLine();
+        System.out.println("Informe o tipo desse artista (solo, dupla, banda): ");
+        var tipo = leitura.nextLine();
+        // Converter para pegar o enum
+        TipoArtista tipoArtista = TipoArtista.valueOf(tipo.toUpperCase());
+        Artista artista = new Artista(nome, tipoArtista);
+        repositorio.save(artista);
     }
 
     private void cadastrarMusicas() {
