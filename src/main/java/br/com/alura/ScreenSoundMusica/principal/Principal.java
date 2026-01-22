@@ -2,11 +2,17 @@ package br.com.alura.ScreenSoundMusica.principal;
 
 import br.com.alura.ScreenSoundMusica.model.Artista;
 import br.com.alura.ScreenSoundMusica.model.TipoArtista;
+import br.com.alura.ScreenSoundMusica.repository.ArtistaRepository;
 
 import java.util.Scanner;
 
 public class Principal {
+    private final ArtistaRepository repositorio;
     private Scanner leitura = new Scanner(System.in);
+
+    public Principal(ArtistaRepository repositorio) {
+        this.repositorio = repositorio;
+    }
 
     public void exibeMenu() {
         var opcao = -1;
