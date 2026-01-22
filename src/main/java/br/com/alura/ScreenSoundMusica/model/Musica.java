@@ -13,6 +13,15 @@ public class Musica {
     @ManyToOne
     private  Artista artista;
 
+    // Construtores
+    public Musica() {
+
+    }
+
+    public Musica(String nomeMusica) {
+        this.titulo = nomeMusica;
+    }
+
     // Getters e Setters
 
 
