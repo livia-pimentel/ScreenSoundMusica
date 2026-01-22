@@ -48,4 +48,3 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/screensound
 spring.datasource.username=${DB_USER}
 spring.datasource.password=${DB_PASSWORD}
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
